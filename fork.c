@@ -10,7 +10,7 @@ int main()
 
     pid_t pid = fork();
 
-    printf("Hello again, pid=%d\n");
+    printf("Hello again, pid=%d\n", pid);
 
     return 0;
 }

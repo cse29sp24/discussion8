@@ -8,6 +8,6 @@ int main()
     char *argv[4] = { "ls", "-a", "-l", NULL };
     execvp("ls", argv);
 
-    printf("Hello again!\n");
+    printf("Hello from the other side!\n");
     return 0;
 }

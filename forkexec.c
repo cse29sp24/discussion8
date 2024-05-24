@@ -11,11 +11,13 @@ int main()
     if (pid < 0) {
         perror("fork");
         exit(EXIT_FAILURE);
-    } else if (pid < 0) {
+    } else if (pid == 0) {
         // child process
         char *argv[4] = { "ls", "-a", "-l", NULL };
         execvp("ls", argv);
     }
+
+    /* TODO: parent should wait for child */
 
     printf("Process %d exiting...\n", getpid());
     return EXIT_SUCCESS;
